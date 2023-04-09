@@ -1,0 +1,182 @@
+
+
+
+
+
+body{
+    background-image:url('../images/Earth-1-1920x1080.jpg');
+    background-size: 100%;
+    height: 150vh;
+
+}
+.navbar::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background-color:rgba(0, 0, 0, 0.367);
+    
+    border: 3px solid rgb(80 60 60 / 37%) ;
+    border-radius: 63px;
+    height:100%;
+    width:100%;
+}
+
+.navbar{
+    display:flex;
+    flex-direction:column;
+    position: relative;
+   
+
+    
+
+
+}
+.navbar ul li a:hover{
+    border-radius:40px;
+    border:3px solid white;
+    background-color: grey;
+    color: black;
+    padding-right:12px;
+    padding-left:12px;
+    
+}
+.navbar ul li a{
+    
+    color: white;
+    padding-top:10px ;
+    text-decoration: none;
+    float: right;
+    padding-right:15px;
+    padding-left:15px;
+    padding-bottom: 7px;
+    font-weight: bold;
+
+
+
+}
+.navbar img{
+    display: block;
+    float: left;
+    padding-bottom: 0px;
+    padding-top: 0px;;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 70px;
+    width:70px;
+}
+.navbar ul{
+    margin-top: 1px;
+    margin-bottom:0px;
+    
+}
+.navbar ul li{
+    margin-top: 12px;
+    display:block;
+    font-size: 25px;
+
+}
+.nav{padding-bottom: 50px;;}
+
+
+
+.trending{
+    margin: auto;
+    background-color:rgb(48 48 48 / 42%);
+    border:2px solid rgb(157 153 153 / 43%);
+    border-radius: 7px;
+    height:45em;
+    width:80em;
+    padding-top:1em;
+    overflow-y: scroll;
+}
+.trendingtext{
+    font-weight: bold;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin: auto;
+    margin-bottom: 1em;
+}
+.profileimg{
+    margin-top: 3%;
+    height: 98%;
+    width: 15%;
+    border-radius: 15px;
+    display: block;
+
+
+
+}
+.profileimg>img{
+    max-width:40%;
+    max-height:40%;
+    width: auto;
+    height: auto;
+    border:2px solid rgb(157 153 153 / 43%);
+    border-radius: 315px;;
+    margin: auto;
+    display: block;
+    
+
+}
+.profileimg>p{
+    margin: auto;
+}
+.content{
+    margin-left:1em;
+    width:90%;
+    height:98%;
+    border:1px solid white;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+.report>p:nth-child(1){
+    color:white ;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.report{
+    display: flex;
+    color:gainsboro;
+    padding: 1em;
+    background-color:rgb(48 48 48 / 42%);
+    border:2px solid rgb(157 153 153 / 43%);
+    border-radius: 15px;
+    height:15em;
+    width: 75em;
+    margin: auto;
+
+}
+.buttons{
+    height:15%;
+    width:33%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: transparent;
+}
+.upvote{
+    background: transparent;
+    border: transparent;
+}
+.buttons img{
+    border-radius: 50px;
+    display: block;
+    background: transparent;
+    height: 100%;
+    width:100%;
+}
+.username{
+    display: flex;
+    justify-content: center;
+}
+.quantity{
+    color: orange;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+   }
+
+

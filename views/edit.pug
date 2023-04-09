@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='../static/loginpage.css')
+  body
+    .nav
+      .navbar
+        ul
+          img(src='../static/images/sv1img.jpg')
+          li
+            a(href='/contactus') Contact Us
+          li
+            a(href='/submitreport')  Submit report
+          li
+            a(href='/trending')  Trending
+          li
+            a(href='/dashboard')  Account
+          li
+            a(href='/home')  Home
+    .login
+      p EDIT ACCOUNT DETAILS
+      form(action='/editaccount',enctype="multipart/form-data", method='post')
+        label(for='name') Name
+        input#name(name='name' type='text', placeholder='enter name')
+        br
+        br
+        label(for='age') Age
+        input#age(name='age' type='text', placeholder='enter your age')
+        br
+        br
+        label(for='username') User name
+        input#username(name='username' type='text', placeholder='enter username')
+        br
+        br
+        label(for='profileimg') Profile photo
+        input#profileimg(name='myImage' type='file', placeholder='upload here')
+        br
+        br
+        .submit
+          input(type='submit', value='Submit')

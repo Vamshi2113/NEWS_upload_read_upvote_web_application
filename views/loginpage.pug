@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="../static/loginpage.css")
+  body
+    .nav
+      .navbar
+        ul
+          img(src="../static/images/sv1img.jpg")
+          li
+            a(href="") Contact Us
+          li
+            a(href="")  Submit report
+          li
+            a(href="")  Trending
+          li
+            a(href="")  Account
+          li
+            a(href="")  Home
+    .login
+      p  LOGIN
+      form(action="/", method="POST")
+        label(for="username") User name
+        input#username(type="text",name="username", placeholder="enter username")
+        br
+        br
+        label(for="passworrd") Password
+        input#password(type="password",name="password", placeholder="enter password")
+        br
+        br
+        .submit
+          input(type="submit", value="Submit")
+      .createaccount
+        a(href="/createaccount") Don&apos;t have account? Create one here

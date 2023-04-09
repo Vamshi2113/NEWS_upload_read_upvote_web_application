@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='../static/dashboard.css')
+  body
+    .nav
+      .navbar
+        ul
+          img(src='../static/images/sv1img.jpg')
+          li
+            a(href='/contactus') Contact Us
+          li
+            a(href='/submitreport')  Submit report
+          li
+            a(href='/trending')  Trending
+          li
+            a(href='/dashboard')  Account
+          li
+            a(href='/home')  Home
+    .container
+      .dashboard
+        p SUBMISSIONS
+        each i in submitdata
+           .submissions
+             p #{i.headline}
+             p 
+             |#{i.content}
+      .account
+        .profileimg
+          img(src="data:image/png;base64,"+profileimg alt="upload your profile-photo")
+        p NAME  : #{name}
+        p EMAIL  :  #{email}
+        p PHONE  :  #{phone}
+        .buttons
+          .edit
+            a(href='/editaccount') EDIT
+          .logout
+            a(href='/') LOGOUT
+    

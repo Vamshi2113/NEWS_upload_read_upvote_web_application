@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='../static/submitreport.css')
+  body
+    .nav
+      .navbar
+        ul
+          img(src='../static/images/sv1img.jpg')
+          li
+            a(href='/contactus') Contact Us
+          li
+            a(href='/submitreport')  Submit report
+          li
+            a(href='/trending')  Trending
+          li
+            a(href='/dashboard')  Account
+          li
+            a(href='/home')  Home
+    .submitreport
+      p SUBMIT REPORT
+      form(action='/submitreport', method='post')
+        label(for='headline') HEADLINE : 
+        input#headline(type='text', name='headline', placeholder='   enter username')
+        br
+        br
+        label#contentlabel(for='content') CONTENT : 
+        textarea#content(name='content', rows='4', cols='50', placeholder='enter content here....')
+        br
+        br
+        .submit
+          input(type='submit', value='Submit')

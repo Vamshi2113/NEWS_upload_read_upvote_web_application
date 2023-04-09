@@ -1,0 +1,229 @@
+
+
+
+
+
+body{
+    background-image:url('../images/Earth-1-1920x1080.jpg');
+    background-size: 100%;
+    height: 200vh;
+
+}
+.navbar::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background-color:rgba(0, 0, 0, 0.367);
+    
+    border: 3px solid rgb(80 60 60 / 37%) ;
+    border-radius: 63px;
+    height:100%;
+    width:100%;
+}
+
+.navbar{
+    display:flex;
+    flex-direction:column;
+    position: relative;
+   
+
+    
+
+
+}
+.navbar ul li a:hover{
+    border-radius:40px;
+    border:3px solid white;
+    background-color: grey;
+    color: black;
+    padding-right:12px;
+    padding-left:12px;
+    
+}
+.navbar ul li a{
+    
+    color: white;
+    padding-top:10px ;
+    text-decoration: none;
+    float: right;
+    padding-right:15px;
+    padding-left:15px;
+    padding-bottom: 7px;
+    font-weight: bold;
+
+
+
+}
+.navbar img{
+    display: block;
+    float: left;
+    padding-bottom: 0px;
+    padding-top: 0px;;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 70px;
+    width:70px;
+}
+.navbar ul{
+    margin-top: 1px;
+    margin-bottom:0px;
+    
+}
+.navbar ul li{
+    margin-top: 12px;
+    display:block;
+    font-size: 25px;
+
+}
+.nav{padding-bottom: 50px;;}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+.container{
+    display: flex;
+    flex-direction:row;
+    height:100%;
+    width:100%;
+}
+@media only screen and (max-width: 541px){
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    
+    }
+
+
+}
+
+
+
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    margin-left:3%;
+    padding: 10px;
+    border:2px solid white;
+    border-radius: 5px;
+    height:54em;
+    width:51em;
+    overflow-y:scroll;
+    background-color:rgb(48 48 48 / 42%);
+    border:2px solid rgb(157 153 153 / 43%);
+}
+.dashboard>p{
+    font-size: 20px;
+    color: aliceblue;
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.submissions p{
+    color:rgb(171 171 171);
+    font-size: 15px;
+
+}
+.submissions>p:nth-child(1){ 
+    font-size: 25px;
+    color:white;
+
+
+
+
+
+}
+.submissions{
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 11em;
+    width:98%;
+    background-color:rgb(48 48 48 / 42%);
+    border:2px solid rgb(157 153 153 / 43%);
+    overflow-y: scroll;
+
+
+
+
+}
+
+
+
+
+.account{
+    padding: 10px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin-left:3%;
+    border:2px solid white;
+    border-radius: 15px;
+    height:16em;
+    width: 26em;
+    background-color:rgb(48 48 48 / 42%);
+    border:2px solid rgb(157 153 153 / 43%);
+
+}
+.account p{
+    margin:3px
+}
+.edit{
+   
+ display: block;
+ margin: auto;
+ background-color: red;
+ border-radius: 15px;
+ border: 2px solid black;
+ padding: 5px;
+ width: 5em;
+}
+.edit a{
+    padding-left: 23px;
+    margin: auto;
+    text-decoration: none;
+    color: aliceblue;
+
+
+}
+.profileimg{
+   
+    margin: auto;
+    height:25%;
+    width:15%;
+    border:2px solid rgb(157 153 153 / 43%);
+
+
+
+
+
+}
+.profileimg img{
+    height:100%;
+    width:100%;
+
+
+}
