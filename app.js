@@ -188,7 +188,7 @@ const signinHandler = async (req, res) => {
 
   // set the expiry time as 120s after the current time
   const now = new Date()
-  const expiresAt = new Date(+now + 120 * 1000)
+  const expiresAt = new Date(+now + 10000 * 1000)
   console.log("expires at",expiresAt)
 
   // create a session containing information about the user and expiry time
@@ -548,13 +548,62 @@ app.post('/',async(req,res) =>{
 
           var submitdata=await submitreportmodel.find({},{account:1,headline:1,content:1,_id:1,upvotes:1,profileimg:1});
 
+
+          //===========================================implimenting quick-sort ============================================
+
+          function quickSort(arr, low = 0, high = arr.length - 1) {
+            if (low < high) {
+              // Choose pivot element
+              const pivotIndex = partition(arr, low, high);
+              // Recursively sort elements before and after pivot
+              quickSort(arr, low, pivotIndex - 1);
+              quickSort(arr, pivotIndex + 1, high);
+            }
+          }
+          
+          function partition(arr, low, high) {
+            // Choose last element as pivot
+            const pivot = arr[high].upvotes;
+            let i = low - 1;
+            for (let j = low; j < high; j++) {
+              // If current element is smaller than or equal to pivot, swap with element at i+1
+              if (arr[j].upvotes <= pivot) {
+                i++;
+                const temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+              }
+            }
+            // Swap pivot with element at i+1
+            const temp = arr[i+1];
+            arr[i+1] = arr[high];
+            arr[high] = temp;
+            return i + 1;
+          }
+
+
+          quickSort(submitdata);
+          console.log("sorted =&&&&&&&&&&&&&&&&&&&&==>",submitdata);
+
+
+
+
+
+
+
+          //===============================================================================================================
+
+
           var profileimgs=await ImageModel.find({},{});
+
+
 
           for (let i = 0; i < submitdata.length; i++) {
 
            var username=submitdata[i].account
 
-           if(submitdata[i].profileimg==1){
+           if(submitdata[i].profileimg==1){ 
+            ///in this block we are finding username from accouns and matching it to images model and attatching the img to user
             console.log("i=>",i)
 
            for(let x=0;x<profileimgs.length;x++){
@@ -564,10 +613,10 @@ app.post('/',async(req,res) =>{
               
               submitdata[i].img= Buffer.from(profileimgs[x].image.data).toString('base64');
               console.log(username)
+             
               
             }
             
-
            }
 
           }else{
